@@ -23,7 +23,7 @@ This project implements a **hybrid deep learning + machine learning pipeline** f
 ## 1. k-mer Feature Extraction
 
 * DNA sequences converted into k-mer frequency vectors
-* Example: k = 6 ? 1024 features
+* Example: k = 6 → 1024 features
 * Output: numerical feature matrix
 
 ---
@@ -32,18 +32,18 @@ This project implements a **hybrid deep learning + machine learning pipeline** f
 
 * Input CSV:
 
-  * Feature columns ? k-mer features
-  * Last column ? Label
+  * Feature columns → k-mer features
+  * Last column → Label
 
 ### Label Structure
 
-* Class 0 ? Non-BGC
-* Class 1..N ? BGC types
+* Class 0 → Non-BGC
+* Class 1..N → BGC types
 
 ### Binary Conversion
 
-* Non-BGC ? 0
-* BGC ? 1
+* Non-BGC → 0
+* BGC → 1
 
 ---
 
@@ -166,52 +166,52 @@ Final Features = [General Features + All Class Features]
 
 ```
 project/
-�-- data/
-�   +-- raw_sequences.fasta
-�   +-- labels.csv
-�   +-- final_output.csv
-�
-�-- models/
-�   +-- PRETRAINED_TRANSFORMERS_BGC/
-�   �   +-- bgc_general_transformer.keras
-�   �   +-- best_bgc_general.keras
-�   �   +-- bgc_class_transformer_<class>.keras
-�   �   +-- best_bgc_class_<class>.keras
-�   �   +-- scaler.pkl
-�   �   +-- label_encoder.pkl
-�   �
-�   +-- xgboost_final_model.pkl
-�   
-�
-�-- scripts/
-�   +-- kmer_generation.py
-�   +-- non_bgc_extraction.py
-�   +-- grid_search.py
-�   +-- bgc_classification.py
-�   +-- shap_analysis.py
-�
-�-- results/
-�   +-- TRAINING_OUTPUT/
-�   �   +-- X_train_combined.npy
-�   �   +-- X_val_combined.npy
-�   �   +-- X_test_combined.npy
-�   �   +-- y_train.npy
-�   �   +-- y_val.npy
-�   �   +-- y_test.npy
-�   �   +-- train_gen_features.npy
-�   �   +-- test_gen_features.npy
-�   �   +-- training_metadata.csv
-�   �   +-- early_stopping_stats.csv
-�   �   +-- class_info.csv
-�   �   +-- general_transformer_history.csv
-�   �   +-- class_<class>_history.csv
-�   �
-�   �
-�   +-- shap_results/
-�   �   +-- shap_values.npy
-�   �   +-- shap_summary_plot.png
-�   �   +-- shap_feature_importance.csv
-�   �   +-- top_kmers.txt
+│── data/
+│   ├── raw_sequences.fasta
+│   ├── labels.csv
+│   ├── final_output.csv
+│
+│── models/
+│   ├── PRETRAINED_TRANSFORMERS_BGC/
+│   │   ├── bgc_general_transformer.keras
+│   │   ├── best_bgc_general.keras
+│   │   ├── bgc_class_transformer_<class>.keras
+│   │   ├── best_bgc_class_<class>.keras
+│   │   ├── scaler.pkl
+│   │   ├── label_encoder.pkl
+│   │
+│   ├── xgboost_final_model.pkl
+│   
+│
+│── scripts/
+│   ├── kmer_generation.py
+│   ├── non_bgc_extraction.py
+│   ├── grid_search.py
+│   ├── bgc_classification.py
+│   ├── shap_analysis.py
+│
+│── results/
+│   ├── TRAINING_OUTPUT/
+│   │   ├── X_train_combined.npy
+│   │   ├── X_val_combined.npy
+│   │   ├── X_test_combined.npy
+│   │   ├── y_train.npy
+│   │   ├── y_val.npy
+│   │   ├── y_test.npy
+│   │   ├── train_gen_features.npy
+│   │   ├── test_gen_features.npy
+│   │   ├── training_metadata.csv
+│   │   ├── early_stopping_stats.csv
+│   │   ├── class_info.csv
+│   │   ├── general_transformer_history.csv
+│   │   ├── class_<class>_history.csv
+│   │
+│   │
+│   ├── shap_results/
+│   │   ├── shap_values.npy
+│   │   ├── shap_summary_plot.png
+│   │   ├── shap_feature_importance.csv
+│   │   ├── top_kmers.txt
 
 ```
 
