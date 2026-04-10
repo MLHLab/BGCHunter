@@ -1,4 +1,4 @@
-A Hybrid Transformer and Gradient Boosting Approach for BGC Detection and Functional Genomic Insights
+### A Two-stage Hierarchical Transformer-based Representation Learning for Prediction and Classification of Biosynthetic Gene Clusters and their Functional Genomic Insights
 
 ## Overview
 
